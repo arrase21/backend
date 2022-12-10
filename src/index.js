@@ -1,8 +1,8 @@
 const express = require('express')
 const conectarDB = require('../config/db')
 const cors = require('cors')
-
 const app = express()
+const port = 3005
 
 // Enlazar la conexion en la base de datos
 
@@ -25,3 +25,4 @@ app.get('/', (req, res) => {
 	res.send('Bienvenidos, servidor configurado')
 })
 
+app.listen(port, () => console.log('esta conectado', port))
