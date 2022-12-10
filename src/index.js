@@ -9,9 +9,9 @@ const port = 3005
 conectarDB()
 app.use(
 	cors({
-    origin: ['https://macro.onrender.com'],
+    origin: ['http://localhost:3005','https://macro.onrender.com'],
 	})
-)
+);
 
 app.use(express.json())
 app.use('/api/clientes', require('../routes/cliente'))
