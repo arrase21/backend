@@ -3,14 +3,13 @@ const conectarDB = require('../config/db')
 const cors = require('cors')
 
 const app = express()
-const port = 5000
 
 // Enlazar la conexion en la base de datos
 
 conectarDB()
 app.use(
 	cors({
-		origin: ['http://localhost:5000', 'https://macro.onrender.com'],
+		origin: ['https://macro.onrender.com'],
 	})
 )
 
