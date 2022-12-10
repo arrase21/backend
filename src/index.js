@@ -9,7 +9,7 @@ const port = 3005
 conectarDB()
 app.use(
 	cors({
-    origin: ['http://localhost:3005','https://macro.onrender.com'],
+    origin: ['https://macro.onrender.com','http://localhost:3005']
 	})
 );
 
