@@ -10,7 +10,7 @@ conectarDB()
 
 app.use(
 	cors({
-    origin: ['https://macro.onrender.com']
+    origin: ['http://localhost:3005','https://macro.onrender.com']
 	})
 );
 
