@@ -10,13 +10,13 @@ conectarDB()
 
 app.use(
 	cors({
-    origin: URL = 'https://macro.onrender.com'
+    origin: ( URL = 'https://macro.onrender.com' )
 	})
 );
 
 app.use(express.json())
 app.use(URL = '/api/clientes', require('../routes/cliente'))
-app.use(URL = '/api/alimentos', require('../routes/alimento'))
+app.use(URL = '/alimentos', require('../routes/alimento'))
 
 
 app.use(URL = '/api/auth', require('../routes/auth'))
