@@ -16,7 +16,7 @@ app.use(
 
 
 app.use(express.json())
-app.use('/api/clientes', require('../routes/cliente'))
+app.use('/clientes', require('../routes/cliente'))
 app.use('/alimentos', require('../routes/alimento'))
 
 
