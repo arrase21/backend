@@ -8,15 +8,20 @@ const cors = require('cors')
 
 conectarDB()
 
-app.use(cors());
+app.use(
+	cors({
+    origin: ( URL = 'https://macro.onrender.com' )
+	})
+);
 
 app.use(express.json())
-app.use((URL = '/api/clientes'), require('../routes/cliente'))
-app.use((URL = '/alimentos'), require('../routes/alimento'))
+app.use(URL = '/api/clientes', require('../routes/cliente'))
+app.use(URL = '/alimentos', require('../routes/alimento'))
 
-app.use((URL = '/api/auth'), require('../routes/auth'))
 
-app.use((URL = '/api/usuarios'), require('../routes/usuarios'))
+app.use(URL = '/api/auth', require('../routes/auth'))
+
+app.use(URL = '/api/usuarios', require('../routes/usuarios'))
 
 app.get('/', (req, res) => {
 	res.send('Bienvenidos, servidor configurado')
